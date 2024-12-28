@@ -1,16 +1,16 @@
 <template>
-    <header
-        role="banner"
-        :class="[headerClasses, headerBgClasses]"
-        class="fixed left-0 right-0 top-0 z-50 w-full py-4 transition-[background-color,transform] lg:py-6 lg:pt-0"
-    >
-        <div class="flex items-center justify-end gap-4 bg-blue py-1 text-sm">
-            <email-address />
-            <phone-number />
+    <header role="banner" class="z-50 w-full py-4 lg:py-6 lg:pt-0">
+        <div class="hidden bg-blue py-1 text-sm lg:flex">
+            <div
+                class="container container-px flex w-full items-end justify-end gap-4 text-white"
+            >
+                <email-address />
+                <phone-number />
+            </div>
         </div>
         <div class="grid-layout container container-px">
             <div
-                class="relative col-span-4 col-start-1 flex w-full items-center justify-between lg:col-span-2"
+                class="relative col-span-4 col-start-1 flex w-full items-center justify-between lg:col-span-3"
             >
                 <site-brand class="aspect-[937.9/276.3] w-full" />
             </div>
@@ -52,7 +52,7 @@
 
             <site-nav
                 v-if="isDesktop"
-                class="site-nav-desktop col-span-10 col-start-3 h-[110px]"
+                class="site-nav-desktop col-span-9 col-start-4"
             />
         </div>
 
@@ -95,12 +95,12 @@ const state: State = reactive({
 // Computed
 -------------------------- */
 
-const headerClasses: ComputedRef<string> = computed(() => {
-    return state.showHeader ? 'translate-y-0' : '-translate-y-full'
-})
-const headerBgClasses: ComputedRef<string> = computed(() => {
-    return uiStore.showMobileNav ? 'bg-blue text-white' : ' text-white'
-})
+// const headerClasses: ComputedRef<string> = computed(() => {
+//     return state.showHeader ? 'translate-y-0' : '-translate-y-full'
+// })
+// const headerBgClasses: ComputedRef<string> = computed(() => {
+//     return uiStore.showMobileNav ? 'bg-blue text-white' : ' text-white'
+// })
 
 const isDesktop: ComputedRef<boolean> = computed(() => {
     return viewport.isGreaterOrEquals('lg')

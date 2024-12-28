@@ -44,9 +44,9 @@ export default {
                     lineHeight: 'calc(100% + 10px)'
                 }
             ],
-            /* Step 0: 17.00px → 21.33px */
+            /* Step 0: 17.00px → ? */
             base: [
-                'clamp(1.06rem, calc(1.00rem + 0.33vw), 1.33rem)',
+                'clamp(1.0625rem, 1.0494rem + 0.0654vw, 1.125rem);',
                 {
                     lineHeight: 'calc(100% + 10px)'
                 }

@@ -6,22 +6,26 @@
                     Home
                 </nuxt-link>
             </li>
-            <li v-for="navItem in navItems" :key="navItem.uuid">
+            <li v-for="navItem in navItems" :key="navItem.uuid" class="group">
                 <nuxt-link
-                    :to="getUrl(navItem.full_slug)"
+                    :to="getUrl(navItem.titlePage.full_slug)"
                     @click="uiStore.showMobileNav = false"
                 >
-                    {{ navItem.name }}
+                    {{ navItem.titlePage.name }}
                 </nuxt-link>
-            </li>
-            <li class="mt-8 lg:mt-0">
-                <nuxt-link
-                    to="https://www.facebook.com/thesheringhamshantymenofficial/"
-                    target="_blank"
-                    @click="uiStore.showMobileNav = false"
-                >
-                    <Icon name="fe:facebook" class="mt-auto size-5" />
-                </nuxt-link>
+                <ul v-if="navItem.subPages.length > 0" class="group-hover:flex">
+                    <li
+                        v-for="subnavItem in navItem.subPages"
+                        :key="subnavItem.uuid"
+                    >
+                        <nuxt-link
+                            :to="getUrl(subnavItem.full_slug)"
+                            @click="uiStore.showMobileNav = false"
+                        >
+                            {{ subnavItem.name }}
+                        </nuxt-link>
+                    </li>
+                </ul>
             </li>
         </ul>
     </nav>

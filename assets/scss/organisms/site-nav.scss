@@ -14,17 +14,26 @@
 
 .site-nav-desktop {
     @apply flex w-full justify-start text-sm xl:text-base;
-    ul {
-        @apply ml-auto inline-flex h-[110px] w-auto gap-px xl:gap-1;
-    }
-    li {
-        @apply flex;
-    }
-    a {
-        @apply flex whitespace-nowrap border-b-2 border-blue-600 bg-blue-600 px-3 pb-2 pt-16 transition-all hover:border-yellow hover:pt-12;
-    }
 
+    > ul {
+        @apply ml-auto inline-flex w-auto gap-2 xl:gap-4;
+        > li {
+            @apply relative flex w-full;
+            > a {
+                @apply flex w-full items-center whitespace-nowrap border-b-2 border-slate-200 text-right transition-all hover:border-yellow;
+            }
+            ul {
+                @apply absolute right-0 top-full hidden w-64 flex-col bg-white hover:flex;
+                li {
+                    @apply flex w-full;
+                    a {
+                        @apply flex w-full bg-slate-100 px-2 py-3 text-right;
+                    }
+                }
+            }
+        }
+    }
     .router-link-active {
-        @apply -translate-y-8 border-white/20 text-blue-400;
+        @apply border-slate-500;
     }
 }

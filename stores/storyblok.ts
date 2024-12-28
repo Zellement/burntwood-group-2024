@@ -127,7 +127,11 @@ export const useStoryblokStore = defineStore('storyblok', {
                 const response = await this.fetchStoryblokData(
                     `cdn/stories/${config.public.STORYBLOK_GLOBAL_OPTIONS_ID}`,
                     {
-                        resolve_relations: ['dataGlobalOptions.navigation']
+                        resolve_relations: [
+                            'dataGlobalOptions.navigation',
+                            'navItem.titlePage',
+                            'navItem.subPages'
+                        ]
                     }
                 )
                 this.globalOptions = response.data?.story
