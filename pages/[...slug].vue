@@ -9,6 +9,7 @@
             />
         </div>
         <media-gallery class="col-span-full xl:col-span-8 xl:col-start-3" />
+        <related-pages />
     </div>
 </template>
 
@@ -17,5 +18,18 @@ const storyblokStore = useStoryblokStore()
 
 const currentStory = computed(() => {
     return storyblokStore.currentStory
+})
+
+const route = useRoute()
+console.log(route)
+
+watchEffect(() => {
+    if (currentStory.value) {
+        storyblokStore.fetchRelatedPages(route.params.slug[0])
+    }
+})
+
+onMounted(() => {
+    storyblokStore.fetchRelatedPages('drainage')
 })
 </script>

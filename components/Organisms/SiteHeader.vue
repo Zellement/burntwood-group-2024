@@ -12,9 +12,11 @@
             <div
                 class="relative col-span-full flex w-full items-center justify-between py-2 lg:col-span-3"
             >
-                <site-brand
-                    class="mx-auto aspect-[937.9/276.3] w-full max-w-56 lg:ml-0"
-                />
+                <nuxt-link to="/" class="mx-auto">
+                    <site-brand
+                        class="aspect-[937.9/276.3] w-full max-w-56 lg:ml-0"
+                    />
+                </nuxt-link>
             </div>
 
             <site-nav
