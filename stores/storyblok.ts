@@ -107,7 +107,9 @@ export const useStoryblokStore = defineStore('storyblok', {
                         resolve_links: 'story',
                         cv: config.public.STORYBLOK_CV_DISABLED
                             ? +new Date()
-                            : null
+                            : null,
+
+                        resolve_relations: ['templatePage.heroButtons']
                     }
                 )
 

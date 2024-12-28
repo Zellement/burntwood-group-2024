@@ -25,6 +25,19 @@
                         :content="currentStory.content.heroSubtext"
                         class="hero-richtext"
                     />
+                    <div
+                        v-if="heroButtons && heroButtons.length > 0"
+                        class="mt-4 flex items-start gap-2"
+                    >
+                        <nuxt-link
+                            v-for="(button, index) in heroButtons"
+                            :key="index"
+                            class="btn hover:text-yellow"
+                            :to="getUrl(button.full_slug)"
+                        >
+                            {{ button.name }}
+                        </nuxt-link>
+                    </div>
                 </div>
             </div>
         </div>
@@ -38,9 +51,15 @@ const currentStory = computed(() => {
     return storyblokStore.currentStory
 })
 
+const { getUrl } = useUrlUtils()
+
 const title: ComputedRef<string> = computed(() => {
     return currentStory.value.content.heroText.length > 0
         ? currentStory.value.content.heroText
         : currentStory.value.name
+})
+
+const heroButtons: ComputedRef<any> = computed(() => {
+    return currentStory.value.content.heroButtons
 })
 </script>
