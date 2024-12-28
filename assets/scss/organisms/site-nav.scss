@@ -1,0 +1,30 @@
+.site-nav-mobile {
+    ul {
+        @apply flex flex-col gap-2;
+    }
+
+    a {
+        @apply flex flex-col text-lg font-bold text-white transition-colors hover:text-green-500 xl:text-lg;
+    }
+
+    .router-link-active {
+        @apply border-l-4 border-yellow pl-4;
+    }
+}
+
+.site-nav-desktop {
+    @apply flex w-full justify-start text-sm xl:text-base;
+    ul {
+        @apply ml-auto inline-flex h-[110px] w-auto gap-px xl:gap-1;
+    }
+    li {
+        @apply flex;
+    }
+    a {
+        @apply flex whitespace-nowrap border-b-2 border-blue-600 bg-blue-600 px-3 pb-2 pt-16 font-serif transition-all hover:border-yellow hover:pt-12;
+    }
+
+    .router-link-active {
+        @apply -translate-y-8 border-white/20 text-blue-400;
+    }
+}

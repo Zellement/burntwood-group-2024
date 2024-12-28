@@ -1,0 +1,121 @@
+/**
+ * ----------------------
+ * Base - Typography
+ * ----------------------
+ */
+
+.h1 {
+    @apply text-3xl;
+}
+
+.h2 {
+    @apply text-2xl;
+}
+
+.h3 {
+    @apply text-xl;
+}
+
+.h4 {
+    @apply text-lg;
+}
+
+.h5 {
+    @apply text-base;
+}
+
+em {
+    @apply italic;
+}
+
+strong {
+    @apply font-bold;
+}
+
+/**
+ * Outline styles
+ */
+a,
+button,
+[tabindex='0'] {
+    &:focus {
+        @apply outline-dashed outline-2 outline-current;
+    }
+
+    &:not(:focus-visible) {
+        @apply outline-none;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    @apply font-serif;
+}
+
+/**
+ * Rich Text / Body Copy
+ */
+.content {
+    @apply flex flex-col space-y-4 text-stone-600;
+
+    @for $i from 1 through 6 {
+        h#{$i} {
+            @apply font-bold;
+        }
+    }
+
+    h2 {
+        @apply text-lg text-blue-500;
+    }
+
+    h3 {
+        @apply text-md text-blue-500;
+    }
+
+    h4 {
+        @apply text-md text-blue-500;
+    }
+
+    h5 {
+        @apply text-base text-blue-500;
+    }
+
+    p strong {
+        @apply font-bold;
+    }
+
+    ul,
+    ol,
+    dl {
+        @apply flex flex-col gap-1 pb-8 pl-4;
+
+        li,
+        dd {
+            @apply relative ml-4 list-none after:absolute after:left-0 after:top-3 after:size-2 after:-translate-x-6 after:rounded-full after:bg-gradient-to-br after:from-yellow-800 after:to-yellow-500 after:content-[''];
+
+            > ul,
+            > dl,
+            > ol {
+                @apply my-4;
+            }
+        }
+    }
+
+    ol {
+        li {
+            @apply list-decimal after:hidden;
+        }
+    }
+
+    a {
+        @apply text-yellow-700 underline transition-colors hover:text-blue-500;
+    }
+
+    blockquote {
+        @apply flex flex-col gap-6 border-l-4 border-slate-300 bg-slate-200 p-4 font-serif text-md xl:p-8;
+    }
+}
