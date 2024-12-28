@@ -1,7 +1,7 @@
 <template>
-    <div class="container container-px grid grid-cols-12">
+    <div class="container container-px my-12 grid grid-cols-12 gap-12">
         <div
-            class="col-span-full py-4 md:col-span-10 md:col-start-2 lg:col-span-8 lg:col-start-3 lg:py-12 xl:col-span-6 xl:col-start-4 xl:py-16 2xl:py-24"
+            class="col-span-full md:col-span-10 md:col-start-2 lg:col-span-8 lg:col-start-3 xl:col-span-6 xl:col-start-4"
         >
             <rich-text
                 class="content"
@@ -9,7 +9,7 @@
             />
         </div>
         <media-gallery class="col-span-full xl:col-span-8 xl:col-start-3" />
-        <related-pages />
+        <related-pages class="col-span-full" />
     </div>
 </template>
 
@@ -25,11 +25,14 @@ console.log(route)
 
 watchEffect(() => {
     if (currentStory.value) {
-        storyblokStore.fetchRelatedPages(route.params.slug[0])
+        storyblokStore.fetchRelatedPages(
+            route.params.slug[0],
+            currentStory.value.full_slug
+        )
     }
 })
 
-onMounted(() => {
-    storyblokStore.fetchRelatedPages('drainage')
-})
+// onMounted(() => {
+//     storyblokStore.fetchRelatedPages(route.params.slug[0])
+// })
 </script>

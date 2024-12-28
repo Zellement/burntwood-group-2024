@@ -1,5 +1,5 @@
 <template>
-    <div class="layout pb-8 lg:pb-0">
+    <div class="layout">
         <site-seo />
         <site-header />
         <site-hero />

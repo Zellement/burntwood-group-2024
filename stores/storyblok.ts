@@ -120,12 +120,16 @@ export const useStoryblokStore = defineStore('storyblok', {
             }
         },
 
-        async fetchRelatedPages(startsWith: string): Promise<void> {
+        async fetchRelatedPages(
+            startsWith: string,
+            excludesSlug: string
+        ): Promise<void> {
             try {
                 const response = await this.fetchStoryblokData(`cdn/stories/`, {
                     content_type: 'templatePage',
                     per_page: 100,
-                    starts_with: startsWith
+                    starts_with: startsWith,
+                    excluding_slugs: excludesSlug
                 })
                 console.log('response', response.data)
                 this.relatedPages = response.data?.stories

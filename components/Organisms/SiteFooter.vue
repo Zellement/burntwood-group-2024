@@ -7,7 +7,7 @@
         referrerpolicy="no-referrer-when-downgrade"
     ></iframe>
 
-    <div class="site-footer bg-slate-100 text-slate-600">
+    <div class="site-footer bg-slate-100 pb-8 text-slate-600 lg:pb-0">
         <footer
             role="contentinfo"
             class="container container-px relative z-10 flex w-full flex-col items-start py-4 text-sm transition-transform duration-500"
