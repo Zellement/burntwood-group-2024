@@ -7,7 +7,7 @@
         >
             <li v-for="page in relatedPages" :key="page.id">
                 <nuxt-link
-                    class="flex w-full flex-col gap-2 p-2 transition-colors hover:bg-blue hover:text-white"
+                    class="flex w-full flex-col gap-2 border-b-2 border-white pb-2 transition-colors hover:border-blue"
                     :to="getUrl(page.full_slug)"
                 >
                     <single-picture
