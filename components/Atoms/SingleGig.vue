@@ -12,7 +12,7 @@
         >
             <span
                 :class="[
-                    'bg-stone-100 font-serif text-[11px] uppercase tracking-widest 2xl:text-[14px]',
+                    'bg-stone-100 text-[11px] uppercase tracking-widest 2xl:text-[14px]',
                     'text-center lg:col-span-full'
                 ]"
             >

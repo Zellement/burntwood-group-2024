@@ -34,8 +34,7 @@ export default {
     ],
     theme: {
         fontFamily: {
-            sans: ['Roboto Condensed', ...defaultTheme.fontFamily.sans],
-            serif: ['Playfair Display', ...defaultTheme.fontFamily.serif]
+            sans: ['Parkinsans', ...defaultTheme.fontFamily.sans]
         },
         fontSize: {
             /* Step -1: 14.17px → 16.00px */
@@ -96,31 +95,43 @@ export default {
                 inherit: 'inherit',
                 // Generate shades from a base colour: https://www.tailwindshades.com/
                 blue: {
-                    DEFAULT: '#172957',
-                    50: '#F3F4F7',
-                    100: '#E8EAEE',
-                    200: '#C5CAD5',
-                    300: '#A2A9BC',
-                    400: '#5D6989',
-                    500: '#172957',
-                    600: '#15254E',
-                    700: '#0E1934',
-                    800: '#0A1227',
-                    900: '#070C1A'
+                    DEFAULT: '#013BE6',
+                    50: '#F2F5FE',
+                    100: '#E6EBFD',
+                    200: '#C0CEF9',
+                    300: '#99B1F5',
+                    400: '#4D76EE',
+                    500: '#013BE6',
+                    600: '#0135CF',
+                    700: '#01238A',
+                    800: '#001B68',
+                    900: '#001245'
+                },
+                green: {
+                    DEFAULT: '#4A9A43',
+                    50: '#F6FAF6',
+                    100: '#EDF5EC',
+                    200: '#D2E6D0',
+                    300: '#B7D7B4',
+                    400: '#80B87B',
+                    500: '#4A9A43',
+                    600: '#438B3C',
+                    700: '#2C5C28',
+                    800: '#21451E',
+                    900: '#162E14'
                 },
                 yellow: {
-                    DEFAULT: '#fac43e',
-                    '50': '#FFFDF5',
-                    '100': '#FFFCED',
-                    '200': '#FFF6CF',
-                    '300': '#FCEDB1',
-                    '400': '#FCDE79',
-                    '500': '#fac43e',
-                    '600': '#E0AA34',
-                    '700': '#BA8323',
-                    '800': '#965F17',
-                    '900': '#70400C',
-                    '950': '#472405'
+                    DEFAULT: '#FFC50A',
+                    50: '#FFFCF3',
+                    100: '#FFF9E7',
+                    200: '#FFF1C2',
+                    300: '#FFE89D',
+                    400: '#FFD654',
+                    500: '#FFC50A',
+                    600: '#E6B109',
+                    700: '#997606',
+                    800: '#735905',
+                    900: '#4D3B03'
                 }
             },
             aspectRatio: {

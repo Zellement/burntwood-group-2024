@@ -4,13 +4,12 @@
         :class="[headerClasses, headerBgClasses]"
         class="fixed left-0 right-0 top-0 z-50 w-full py-4 transition-[background-color,transform] lg:py-6 lg:pt-0"
     >
+        <div class="bg-blue"><email-address /></div>
         <div class="grid-layout container container-px">
             <div
                 class="relative col-span-4 col-start-1 flex w-full items-center justify-between lg:col-span-2"
             >
-                <site-brand
-                    class="relative z-40 mr-auto block size-16 self-start lg:size-24 xl:mt-4 2xl:size-32"
-                />
+                <site-brand class="aspect-[937.9/276.3] w-full" />
             </div>
             <div
                 v-if="!isDesktop"

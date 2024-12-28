@@ -1,10 +1,10 @@
 <template>
     <div
-        class="panel-base !fixed left-0 !z-[9999] grid place-items-center bg-blue-500 text-black"
+        class="panel-base !fixed left-0 !z-[9999] grid place-items-center bg-blue-100 text-black"
         :class="uiStore.pageIsLoading ? 'top-0' : 'top-full delay-200'"
     >
         <div
-            class="panel-base bg-blue-700"
+            class="panel-base bg-white"
             :class="uiStore.pageIsLoading ? 'top-0 delay-200' : 'top-full'"
         />
         <div
@@ -15,11 +15,8 @@
                     : 'opacity-0 delay-200'
             "
         >
-            <div class="w-32">
-                <nuxt-img
-                    src="/images/sheringham-shantymen-logo.webp"
-                    alt="Sheringham Shantymen logo"
-                />
+            <div class="w-full max-w-64">
+                <site-brand class="aspect-[937.9/276.3] w-full" />
             </div>
         </div>
     </div>

@@ -21,7 +21,7 @@
         @apply flex;
     }
     a {
-        @apply flex whitespace-nowrap border-b-2 border-blue-600 bg-blue-600 px-3 pb-2 pt-16 font-serif transition-all hover:border-yellow hover:pt-12;
+        @apply flex whitespace-nowrap border-b-2 border-blue-600 bg-blue-600 px-3 pb-2 pt-16 transition-all hover:border-yellow hover:pt-12;
     }
 
     .router-link-active {

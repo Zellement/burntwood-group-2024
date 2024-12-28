@@ -42,7 +42,7 @@
         margin-bottom: 1rem;
 
         span {
-            @apply mb-1 font-serif;
+            @apply mb-1;
         }
 
         input,
