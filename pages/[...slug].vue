@@ -1,5 +1,5 @@
 <template>
-    <div class="container container-px my-12 grid grid-cols-12 gap-12">
+    <div class="container container-px my-12 grid grid-cols-12 gap-y-12">
         <div
             class="col-span-full md:col-span-10 md:col-start-2 lg:col-span-8 lg:col-start-3 xl:col-span-6 xl:col-start-4"
         >
@@ -21,7 +21,6 @@ const currentStory = computed(() => {
 })
 
 const route = useRoute()
-console.log(route)
 
 watchEffect(() => {
     if (currentStory.value) {
@@ -31,8 +30,4 @@ watchEffect(() => {
         )
     }
 })
-
-// onMounted(() => {
-//     storyblokStore.fetchRelatedPages(route.params.slug[0])
-// })
 </script>

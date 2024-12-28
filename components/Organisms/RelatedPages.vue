@@ -7,7 +7,7 @@
         >
             <li v-for="page in relatedPages" :key="page.id">
                 <nuxt-link
-                    class="flex flex-col gap-2 p-2 transition-colors hover:bg-blue hover:text-white"
+                    class="flex w-full flex-col gap-2 p-2 transition-colors hover:bg-blue hover:text-white"
                     :to="getUrl(page.full_slug)"
                 >
                     <single-picture
@@ -15,7 +15,7 @@
                             url: page.content.heroMedia.filename ?? '',
                             alt: page.content.heroMedia.alt ?? ''
                         }"
-                        class="aspect-video"
+                        class="aspect-video w-full"
                     />
                     {{ page.name }}
                 </nuxt-link>
