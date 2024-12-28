@@ -1,7 +1,7 @@
 <template>
     <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2419.5149013675136!2d-1.944362822560345!3d52.66873910394229!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4870a07dde638153%3A0xd3cc00493d8d4848!2sBurntwood%20Group!5e0!3m2!1sen!2suk!4v1735422971111!5m2!1sen!2suk"
-        class="h-72 w-full lg:h-96"
+        class="mt-12 h-72 w-full lg:h-96"
         style="border: 0"
         loading="lazy"
         referrerpolicy="no-referrer-when-downgrade"

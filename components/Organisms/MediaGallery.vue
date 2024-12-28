@@ -1,34 +1,24 @@
 <template>
-    <section class="">
+    <section v-if="media && media.length > 0">
         <embla-carousel
-            :key="id"
             ref="carouselRef"
             :options="{
                 loop: true,
                 align: 'start'
             }"
             show-dots
-            :show-buttons="content.media.length > 2"
-            :media="content.media"
-            :show-thumbs="showThumbs"
-            :show-captions="content.showCaptions"
+            :show-buttons="media.length > 2"
+            :media="media"
         >
             <template #carousel-items>
                 <div
-                    v-for="slide in content.media"
+                    v-for="slide in media"
                     :key="slide.id"
                     :class="[
-                        'embla__slide embla__slide--90 relative',
-                        'flex h-full w-full xl:max-h-[70vh]',
-                        '2xl:embla__slide--80'
+                        'embla__slide relative max-h-[90vh]',
+                        'flex h-full w-full xl:max-h-[70vh]'
                     ]"
                 >
-                    <div
-                        v-if="content.showCaptions && slide.title"
-                        class="absolute left-0 top-0 z-10 bg-white px-2 py-1 text-sm"
-                    >
-                        {{ slide.title }}
-                    </div>
                     <single-picture
                         class="aspect-square md:aspect-landscape"
                         :img-data="{
@@ -45,18 +35,15 @@
 
 <script lang="ts" setup>
 import type { EmblaCarouselType } from 'embla-carousel'
-const props = defineProps<{
-    content: SectionMediaGalleryStoryblok
-}>()
+const storyblokStore = useStoryblokStore()
 
-const id = useId()
-/**
- * Ref
- */
+const currentStory = computed(() => {
+    return storyblokStore.currentStory
+})
 
 const carouselRef = ref<{ emblaApi: EmblaCarouselType | null } | null>(null)
 
-const showThumbs: ComputedRef<boolean> = computed(() => {
-    return props.content.media.length > 2 && props.content.showThumbnails
+const media: ComputedRef<any> = computed(() => {
+    return currentStory.value.content.gallery
 })
 </script>

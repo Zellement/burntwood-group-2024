@@ -1,22 +1,19 @@
 <template>
-    <div class="container container-px grid grid-cols-2">
-        <div class="py-4 xl:py-8">
+    <div class="container container-px grid grid-cols-12">
+        <div
+            class="col-span-full py-4 md:col-span-10 md:col-start-2 lg:col-span-8 lg:col-start-3 lg:py-12 xl:col-span-6 xl:col-start-4 xl:py-16 2xl:py-24"
+        >
             <rich-text
                 class="content"
                 :content="currentStory?.content?.content"
             />
         </div>
-        <!-- <block-loop
-            :key="`${id}__${currentStory?.id}`"
-            :blocks="currentStory?.content.body"
-        /> -->
+        <media-gallery class="col-span-full xl:col-span-8 xl:col-start-3" />
     </div>
 </template>
 
 <script setup lang="ts">
 const storyblokStore = useStoryblokStore()
-
-// const id = useId()
 
 const currentStory = computed(() => {
     return storyblokStore.currentStory
