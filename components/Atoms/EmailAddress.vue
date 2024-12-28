@@ -1,5 +1,9 @@
 <template>
-    <nuxt-link :to="`mailto:${emailAddress}`" class="">
+    <nuxt-link
+        :to="`mailto:${emailAddress}`"
+        class="flex items-center gap-1 transition-colors hover:text-yellow"
+    >
+        <Icon name="material-symbols:mail-sharp" class="size-4" />
         {{ emailAddress }}
     </nuxt-link>
 </template>

@@ -1,10 +1,14 @@
 .site-nav-mobile {
-    ul {
+    > ul {
         @apply flex flex-col gap-2;
-    }
-
-    a {
-        @apply flex flex-col text-lg font-bold text-white transition-colors hover:text-green-500 xl:text-lg;
+        > li {
+            > a {
+                @apply flex flex-col text-md font-bold text-white transition-colors hover:text-green-500 xl:text-lg;
+            }
+            > ul {
+                @apply pl-4 text-base text-white;
+            }
+        }
     }
 
     .router-link-active {

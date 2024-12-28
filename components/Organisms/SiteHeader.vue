@@ -10,44 +10,11 @@
         </div>
         <div class="grid-layout container container-px">
             <div
-                class="relative col-span-4 col-start-1 flex w-full items-center justify-between lg:col-span-3"
+                class="relative col-span-full flex w-full items-center justify-between py-2 lg:col-span-3"
             >
-                <site-brand class="aspect-[937.9/276.3] w-full" />
-            </div>
-            <div
-                v-if="!isDesktop"
-                class="col-span-3 col-start-10 row-start-1 flex items-center justify-center"
-            >
-                <button
-                    class="relative z-50 ml-auto flex h-8 w-full text-right"
-                    aria-label="Open navigation"
-                    @click="uiStore.toggleBoolean('showMobileNav')"
-                >
-                    <Transition name="slide-up">
-                        <span
-                            v-if="!uiStore.showMobileNav"
-                            class="absolute right-0 top-0 flex items-center gap-2 bg-blue px-2 py-1"
-                        >
-                            <span class="">Menu</span>
-
-                            <Icon
-                                class="ml-auto mt-0.5 size-6"
-                                name="ic:baseline-menu"
-                            />
-                        </span>
-                        <span
-                            v-else-if="uiStore.showMobileNav"
-                            class="absolute right-0 top-0 flex items-center gap-2"
-                        >
-                            <span class="">Close</span>
-
-                            <Icon
-                                class="ml-auto mt-0.5 size-6"
-                                name="material-symbols-light:cancel-outline"
-                            />
-                        </span>
-                    </Transition>
-                </button>
+                <site-brand
+                    class="mx-auto aspect-[937.9/276.3] w-full max-w-40 lg:ml-0"
+                />
             </div>
 
             <site-nav
@@ -59,10 +26,16 @@
         <Transition name="slide-up">
             <div
                 v-if="uiStore.showMobileNav"
-                class="fixed inset-0 z-10 h-screen w-full overflow-y-scroll bg-blue-800/90 py-4 transition-transform duration-300"
+                class="fixed inset-0 z-10 h-screen w-full overflow-y-scroll bg-blue-800 transition-transform duration-300"
             >
-                <div class="container container-px pt-24 xl:pb-20">
+                <div class="flex h-full flex-col p-8">
                     <site-nav class="site-nav-mobile col-span-full" />
+                    <button
+                        class="btn mt-auto self-end text-white"
+                        @click="uiStore.toggleBoolean('showMobileNav')"
+                    >
+                        Close
+                    </button>
                 </div>
             </div>
         </Transition>
