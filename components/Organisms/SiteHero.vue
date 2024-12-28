@@ -1,18 +1,20 @@
 <template>
     <div class="grid bg-blue text-white lg:grid-cols-2">
-        <div class="col-span-1 col-start-2 row-start-1">
+        <div class="lg:col-span-1 lg:col-start-2 lg:row-start-1">
             <single-picture
                 :img-data="{
                     url: currentStory.content.heroMedia.filename ?? '',
                     alt: currentStory.content.heroMedia.alt ?? ''
                 }"
-                class="aspect-square h-full w-full object-cover lg:aspect-video"
+                class="aspect-video h-full w-full object-cover"
             />
         </div>
 
-        <div class="col-span-full row-start-1 grid grid-cols-2">
+        <div
+            class="flex flex-col lg:col-span-full lg:row-start-1 lg:grid lg:grid-cols-2"
+        >
             <div
-                class="container container-px flex w-full flex-col items-center"
+                class="container container-px flex w-full flex-col items-center py-4"
             >
                 <div class="my-auto flex w-full flex-col">
                     <p class="text-lg font-bold">
