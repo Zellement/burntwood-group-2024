@@ -1,6 +1,6 @@
 <template>
     <div class="container container-px grid grid-cols-2">
-        <div class="p-4">
+        <div class="py-4">
             <rich-text
                 class="content"
                 :content="currentStory?.content?.content"
