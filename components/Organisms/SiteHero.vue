@@ -1,6 +1,6 @@
 <template>
     <div class="grid bg-blue text-white lg:grid-cols-2">
-        <div class="col-span-1 col-start-2 row-start-1 bg-red-300">
+        <div class="col-span-1 col-start-2 row-start-1">
             <single-picture
                 :img-data="{
                     url: currentStory.content.heroMedia.filename ?? '',
@@ -15,8 +15,8 @@
                 class="container container-px flex w-full flex-col items-center"
             >
                 <div class="my-auto flex w-full flex-col">
-                    <p v-if="currentStory.content.heroText" class="text-lg">
-                        {{ currentStory.content.heroText }}
+                    <p class="text-lg font-bold">
+                        {{ title }}
                     </p>
                     <rich-text
                         v-if="currentStory.content.heroSubtext"
@@ -34,5 +34,11 @@ const storyblokStore = useStoryblokStore()
 
 const currentStory = computed(() => {
     return storyblokStore.currentStory
+})
+
+const title: ComputedRef<string> = computed(() => {
+    return currentStory.value.content.heroText.length > 0
+        ? currentStory.value.content.heroText
+        : currentStory.value.name
 })
 </script>
