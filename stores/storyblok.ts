@@ -131,7 +131,6 @@ export const useStoryblokStore = defineStore('storyblok', {
                     starts_with: startsWith,
                     excluding_slugs: excludesSlug
                 })
-                console.log('response', response.data)
                 this.relatedPages = response.data?.stories
             } catch (error) {
                 throw error
