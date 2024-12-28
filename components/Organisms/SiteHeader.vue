@@ -13,7 +13,7 @@
                 class="relative col-span-full flex w-full items-center justify-between py-2 lg:col-span-3"
             >
                 <site-brand
-                    class="mx-auto aspect-[937.9/276.3] w-full max-w-40 lg:ml-0"
+                    class="mx-auto aspect-[937.9/276.3] w-full max-w-56 lg:ml-0"
                 />
             </div>
 

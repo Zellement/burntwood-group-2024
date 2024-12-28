@@ -8,7 +8,7 @@
             <Icon class="mt-0.5 size-4" name="ic:baseline-menu" />
             <span class="">Menu</span>
         </button>
-        <phone-number class="bg-yellow" />
+        <phone-number class="flex justify-center bg-yellow" />
     </div>
 </template>
 

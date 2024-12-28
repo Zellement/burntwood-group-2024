@@ -1,33 +1,30 @@
 <template>
-    <div class="grid grid-cols-12 xl:fixed xl:inset-0">
-        <div
-            class="relative col-span-full xl:col-span-8 xl:col-start-5 xl:h-[80vh]"
-        >
+    <div class="grid bg-blue text-white lg:grid-cols-2">
+        <div class="col-span-1 col-start-2 row-start-1 bg-red-300">
             <single-picture
                 :img-data="{
-                    url: currentStory.content.heroMedia.filename,
-                    alt: currentStory.content.heroMedia.alt
+                    url: currentStory.content.heroMedia.filename ?? '',
+                    alt: currentStory.content.heroMedia.alt ?? ''
                 }"
-                class="xl:h-[50vh aspect-square lg:aspect-landscape xl:aspect-auto xl:w-full xl:object-cover"
-                sizes="500px lg:1000px xl:1600px"
+                class="aspect-square h-full w-full object-cover lg:aspect-video"
             />
         </div>
-    </div>
-    <div
-        class="container container-px relative z-10 -mb-6 w-full xl:translate-y-[40vh]"
-    >
-        <div
-            class="mx-auto flex max-w-screen-sm-md -translate-y-10 flex-col items-start gap-2 bg-blue-800 p-4 text-white xl:mx-0 xl:bg-transparent xl:p-0 xl:text-white"
-        >
-            <h1 class="text-3xl xl:bg-blue-800 xl:px-3 xl:py-2">
-                {{ currentStory.content.heroPrimary }}
-            </h1>
-            <h2
-                v-if="currentStory.content.heroSecondary"
-                class="max-w-screen-xs text-lg text-yellow-400 xl:bg-blue-800 xl:px-3 xl:py-2"
+
+        <div class="col-span-full row-start-1 grid grid-cols-2">
+            <div
+                class="container container-px flex w-full flex-col items-center"
             >
-                {{ currentStory.content.heroSecondary }}
-            </h2>
+                <div class="my-auto flex w-full flex-col">
+                    <p v-if="currentStory.content.heroText" class="text-lg">
+                        {{ currentStory.content.heroText }}
+                    </p>
+                    <rich-text
+                        v-if="currentStory.content.heroSubtext"
+                        :content="currentStory.content.heroSubtext"
+                        class="hero-richtext"
+                    />
+                </div>
+            </div>
         </div>
     </div>
 </template>

@@ -56,6 +56,13 @@ h6 {
     @apply font-sans;
 }
 
+.hero-richtext {
+    @apply text-yellow;
+    p {
+        @apply text-md;
+    }
+}
+
 /**
  * Rich Text / Body Copy
  */

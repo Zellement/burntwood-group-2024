@@ -1,5 +1,5 @@
 <template>
-    <div v-if="renderedText" v-dompurify-html="renderedText" class="content" />
+    <div v-if="renderedText" v-dompurify-html="renderedText" />
 </template>
 
 <script lang="ts" setup>

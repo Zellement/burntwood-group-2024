@@ -2,6 +2,7 @@
     <div class="layout">
         <site-seo />
         <site-header />
+        <site-hero />
         <main>
             <slot />
         </main>
