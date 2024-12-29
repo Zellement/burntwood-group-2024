@@ -7,7 +7,7 @@
                 align: 'start'
             }"
             show-dots
-            :show-buttons="media.length > 2"
+            :show-buttons="media.length > 1"
             :media="media"
         >
             <template #carousel-items>
