@@ -9,6 +9,11 @@
             <li v-for="navItem in navItems" :key="navItem.uuid" class="group">
                 <nuxt-link
                     :to="getUrl(navItem.titlePage.full_slug)"
+                    :class="
+                        route.params.slug.includes(navItem.titlePage.slug)
+                            ? 'router-link-active'
+                            : ''
+                    "
                     @click="uiStore.showMobileNav = false"
                 >
                     {{ navItem.titlePage.name }}
@@ -36,6 +41,8 @@ const { getUrl } = useUrlUtils()
 
 const storyblokStore = useStoryblokStore()
 const uiStore = useUiStore()
+
+const route = useRoute()
 
 defineProps<{
     ulClasses?: string
