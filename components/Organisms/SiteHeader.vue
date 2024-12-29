@@ -4,7 +4,7 @@
             <div
                 class="container container-px flex w-full items-end justify-end gap-4 text-white"
             >
-                <email-address />
+                <email-address class="hover:text-yellow" />
                 <phone-number class="hover:text-yellow" />
             </div>
         </div>
