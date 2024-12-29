@@ -34,6 +34,11 @@
                     <p class="mt-4">
                         &copy; Burntwood Group {{ date }}. All Rights Reserved
                     </p>
+                    <p>
+                        <nuxt-link to="/cookies-privacy-policy"
+                            >Cookies &amp; Privacy Policy</nuxt-link
+                        >
+                    </p>
                 </div>
                 <div
                     class="flex flex-wrap items-center justify-center gap-8 p-4"

@@ -1,5 +1,5 @@
 <template>
-    <header role="banner" class="z-50 w-full py-4 lg:py-6 lg:pt-0">
+    <header role="banner" class="z-50 w-full py-4 lg:py-0">
         <div class="hidden bg-blue py-1 text-sm lg:flex">
             <div
                 class="container container-px flex w-full items-end justify-end gap-4 text-white"
@@ -8,7 +8,7 @@
                 <phone-number class="hover:text-yellow" />
             </div>
         </div>
-        <div class="grid-layout container container-px">
+        <div class="grid-layout container container-px lg:py-2">
             <div
                 class="relative col-span-full flex w-full items-center justify-between py-2 lg:col-span-3"
             >
