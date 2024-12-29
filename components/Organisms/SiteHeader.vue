@@ -28,7 +28,7 @@
         <Transition name="slide-up">
             <div
                 v-if="uiStore.showMobileNav"
-                class="fixed inset-0 z-10 h-screen w-full overflow-y-scroll bg-blue-800 transition-transform duration-300"
+                class="fixed inset-0 z-[9999] h-screen w-full overflow-y-scroll bg-blue-800 transition-transform duration-300"
             >
                 <div class="flex h-full flex-col p-8">
                     <site-nav class="site-nav-mobile col-span-full" />
