@@ -3,8 +3,8 @@
         <div class="lg:col-span-1 lg:col-start-2 lg:row-start-1">
             <single-picture
                 :img-data="{
-                    url: currentStory.content.heroMedia.filename ?? '',
-                    alt: currentStory.content.heroMedia.alt ?? ''
+                    url: currentStory.content?.heroMedia?.filename ?? '',
+                    alt: currentStory.content?.heroMedia?.alt ?? ''
                 }"
                 class="aspect-video h-full w-full object-cover"
             />
@@ -20,12 +20,12 @@
                     <p class="text-lg font-bold">
                         {{ title }}
                     </p>
-                    <p v-if="currentStory.content.brand" class="italic">
-                        by {{ currentStory.content.brand }}
+                    <p v-if="currentStory.content?.brand" class="italic">
+                        by {{ currentStory.content?.brand }}
                     </p>
                     <rich-text
-                        v-if="currentStory.content.heroSubtext"
-                        :content="currentStory.content.heroSubtext"
+                        v-if="currentStory.content?.heroSubtext"
+                        :content="currentStory.content?.heroSubtext"
                         class="hero-richtext mt-4"
                     />
                     <div
@@ -57,12 +57,12 @@ const currentStory = computed(() => {
 const { getUrl } = useUrlUtils()
 
 const title: ComputedRef<string> = computed(() => {
-    return currentStory.value.content.heroText.length > 0
-        ? currentStory.value.content.heroText
-        : currentStory.value.name
+    return currentStory.value?.content?.heroText.length > 0
+        ? currentStory.value?.content?.heroText
+        : currentStory.value?.name
 })
 
 const heroButtons: ComputedRef<any> = computed(() => {
-    return currentStory.value.content.heroButtons
+    return currentStory.value?.content?.heroButtons
 })
 </script>
