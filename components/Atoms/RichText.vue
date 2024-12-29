@@ -11,7 +11,19 @@ interface Props {
 
 const props = defineProps<Props>()
 
-const { render } = richTextResolver()
+const { render } = richTextResolver({
+    optimizeImages: {
+        loading: 'lazy',
+        width: 800,
+        height: 600,
+        srcset: [400, 800, 1200, 1600],
+        sizes: ['(max-width: 400px) 100vw', '40vw'],
+        filters: {
+            format: 'webp',
+            quality: 70
+        }
+    }
+})
 
 const renderedText: ComputedRef<unknown> = computed(() => {
     if (typeof props?.content === 'string') {
