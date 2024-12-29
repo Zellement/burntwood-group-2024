@@ -27,11 +27,11 @@
                 @apply flex w-full items-center whitespace-nowrap border-b-2 border-slate-200 text-right transition-all hover:border-yellow;
             }
             ul {
-                @apply absolute right-0 top-full z-40 hidden w-64 flex-col bg-white hover:flex;
+                @apply absolute right-0 top-full z-40 hidden w-64 flex-col bg-white text-sm hover:flex;
                 li {
                     @apply flex w-full;
                     a {
-                        @apply flex w-full bg-slate-100 px-2 py-3 text-right transition-colors hover:bg-slate-200;
+                        @apply flex w-full bg-slate-100 px-2 py-3 transition-colors hover:bg-slate-200;
                     }
                 }
             }
