@@ -5,7 +5,7 @@
                 class="container container-px flex w-full items-end justify-end gap-4 text-white"
             >
                 <email-address />
-                <phone-number />
+                <phone-number class="hover:text-yellow" />
             </div>
         </div>
         <div class="grid-layout container container-px">

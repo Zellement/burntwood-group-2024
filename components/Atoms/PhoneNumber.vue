@@ -1,7 +1,7 @@
 <template>
     <nuxt-link
         :to="`tel:${telephone}`"
-        class="flex items-center gap-1 transition-colors hover:text-yellow"
+        class="flex items-center gap-1 transition-colors"
     >
         <Icon name="material-symbols:call-sharp" class="size-4" />
         {{ telephone }}

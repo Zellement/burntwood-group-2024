@@ -8,6 +8,7 @@
                 :content="currentStory?.content?.content"
             />
         </div>
+        <main-contact class="col-span-full xl:col-span-8 xl:col-start-3" />
         <media-gallery class="col-span-full xl:col-span-8 xl:col-start-3" />
         <related-pages class="col-span-full" />
     </div>

@@ -12,7 +12,7 @@
             role="contentinfo"
             class="container container-px relative z-10 flex w-full flex-col items-start py-4 text-sm transition-transform duration-500"
         >
-            <phone-number />
+            <phone-number class="hover:text-yellow" />
             <email-address />
             <p class="flex items-start gap-1">
                 <Icon

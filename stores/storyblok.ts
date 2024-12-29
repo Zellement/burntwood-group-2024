@@ -87,7 +87,10 @@ export const useStoryblokStore = defineStore('storyblok', {
                             ? +new Date()
                             : null,
 
-                        resolve_relations: ['templatePage.heroButtons']
+                        resolve_relations: [
+                            'templatePage.heroButtons',
+                            'templatePage.mainContact'
+                        ]
                     }
                 )
 
