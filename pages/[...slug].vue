@@ -1,5 +1,9 @@
 <template>
     <div class="container container-px my-12 grid grid-cols-12 gap-y-12">
+        <meet-the-team
+            v-if="route.fullPath === '/about-us'"
+            class="col-span-full"
+        />
         <div
             class="col-span-full md:col-span-10 md:col-start-2 lg:col-span-8 lg:col-start-3 xl:col-span-6 xl:col-start-4"
         >

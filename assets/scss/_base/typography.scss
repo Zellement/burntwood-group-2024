@@ -107,6 +107,10 @@ h6 {
         @apply font-bold;
     }
 
+    p:first-of-type {
+        @apply text-[1.1em];
+    }
+
     ul,
     ol,
     dl {

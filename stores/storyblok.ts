@@ -140,6 +140,23 @@ export const useStoryblokStore = defineStore('storyblok', {
             }
         },
 
+        async fetchTeamMembers(): Promise<any> {
+            try {
+                const response = await this.fetchStoryblokData(`cdn/stories/`, {
+                    content_type: 'dataSinglePerson',
+                    filter_query: {
+                        hideFromTeamListing: {
+                            is: false
+                        }
+                    }
+                })
+                console.log(response)
+                return response.data?.stories
+            } catch (error) {
+                throw error
+            }
+        },
+
         // Fetches required data once in app.vue
         async fetchRequired(): Promise<void> {
             await this.fetchGlobalOptions()
