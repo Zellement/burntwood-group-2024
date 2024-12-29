@@ -33,8 +33,12 @@ const pageName: ComputedRef<string> = computed(() => {
     return storyblokStore.currentStory.name
 })
 
-const metaTags: ComputedRef<MetaTags | null> = computed(
-    () => storyblokStore.getCurrentStorySeoMetaTags
+const metaTitle: ComputedRef<string | null> = computed(
+    () => storyblokStore.currentStory.content.metaTitle
+)
+
+const metaDescription: ComputedRef<string | null> = computed(
+    () => storyblokStore.currentStory.content.metaDescription
 )
 
 const storyID: ComputedRef<string> = computed(() => {
@@ -57,16 +61,9 @@ watch(
     () => storyID.value,
     (newVal, oldVal) => {
         if (newVal === oldVal) return
-        useSeoMeta({ ...metaTags.value })
-        defineOgImageComponent('DefaultOgImage', {
-            title:
-                metaTags.value?.og_title ||
-                metaTags.value?.title ||
-                pageName.value,
-            description:
-                metaTags.value?.og_description ||
-                metaTags.value?.description ||
-                ''
+        useSeoMeta({
+            title: metaTitle.value || pageName.value,
+            description: metaDescription.value || ''
         })
     },
     { immediate: true }
