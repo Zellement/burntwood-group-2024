@@ -33,7 +33,7 @@
                 <div class="flex h-full flex-col p-8">
                     <site-nav class="site-nav-mobile col-span-full" />
                     <button
-                        class="btn mt-auto self-end text-white"
+                        class="btn mb-12 mt-auto self-end text-white"
                         @click="uiStore.toggleBoolean('showMobileNav')"
                     >
                         Close
