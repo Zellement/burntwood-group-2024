@@ -20,10 +20,13 @@
                     <p class="text-lg font-bold">
                         {{ title }}
                     </p>
+                    <p v-if="currentStory.content.brand" class="italic">
+                        by {{ currentStory.content.brand }}
+                    </p>
                     <rich-text
                         v-if="currentStory.content.heroSubtext"
                         :content="currentStory.content.heroSubtext"
-                        class="hero-richtext"
+                        class="hero-richtext mt-4"
                     />
                     <div
                         v-if="heroButtons && heroButtons.length > 0"

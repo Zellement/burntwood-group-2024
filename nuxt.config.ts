@@ -131,7 +131,7 @@ export default defineNuxtConfig({
                 {
                     rel: 'icon',
                     type: 'image/x-icon',
-                    href: '/images/sheringham-shantymen-logo.webp'
+                    href: '/images/favicon.png'
                 }
                 // {
                 //     rel: 'preconnect',
