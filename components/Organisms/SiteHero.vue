@@ -6,7 +6,9 @@
                     url: currentStory.content?.heroMedia?.filename ?? '',
                     alt: currentStory.content?.heroMedia?.alt ?? ''
                 }"
+                loading="eager"
                 class="aspect-video h-full w-full object-cover"
+                sizes="300px md:50vw lg:50vw xl:50vw"
             />
         </div>
 

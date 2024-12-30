@@ -4,6 +4,7 @@
         class="mt-12 h-72 w-full lg:h-96"
         style="border: 0"
         loading="lazy"
+        title="Map of Burntwood Group"
         referrerpolicy="no-referrer-when-downgrade"
     ></iframe>
 
@@ -47,6 +48,7 @@
                         v-for="accreditation in accreditations"
                         :key="accreditation.id"
                         :src="accreditation.filename"
+                        :alt="accreditation.alt"
                         provider="storyblok"
                     />
                 </div>
