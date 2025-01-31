@@ -131,7 +131,7 @@ export default defineNuxtConfig({
                 {
                     rel: 'icon',
                     type: 'image/x-icon',
-                    href: '/images/favicon.png'
+                    href: '/favicon.png'
                 }
                 // {
                 //     rel: 'preconnect',
