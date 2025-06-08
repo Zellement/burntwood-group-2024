@@ -12,6 +12,7 @@ export default defineNuxtConfig({
     nitro: {
         compressPublicAssets: true,
         minify: true,
+        static: true,
         prerender: {
             crawlLinks: true,
             ignore: ['/icons', '/_icons']
