@@ -63,8 +63,10 @@ picture img {
     @apply flex flex-col space-y-16;
 }
 
-.grid-layout {
-    @apply grid w-full grid-cols-12 gap-2 md:gap-6 xl:gap-12;
+@layer utilities {
+    .grid-layout {
+        @apply grid w-full grid-cols-12 gap-2 md:gap-6 xl:gap-12;
+    }
 }
 
 @layer utilities {

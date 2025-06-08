@@ -12,7 +12,7 @@
             <div
                 class="relative col-span-full flex w-full items-center justify-between py-2 lg:col-span-3"
             >
-                <nuxt-link title="Go to homepage" to="/" class="mx-auto">
+                <nuxt-link title="Go to homepage" to="/" class="mx-auto lg:m-0">
                     <site-brand
                         class="aspect-[937.9/276.3] w-full max-w-56 lg:ml-0"
                     />

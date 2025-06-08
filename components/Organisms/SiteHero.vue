@@ -12,36 +12,34 @@
             />
         </div>
 
-        <div
-            class="flex flex-col lg:col-span-full lg:row-start-1 lg:grid lg:grid-cols-2"
-        >
-            <div
-                class="container container-px flex w-full flex-col items-center py-4"
-            >
-                <div class="my-auto flex w-full flex-col">
-                    <p class="text-lg font-bold">
-                        {{ title }}
-                    </p>
-                    <p v-if="currentStory.content?.brand" class="italic">
-                        by {{ currentStory.content?.brand }}
-                    </p>
-                    <rich-text
-                        v-if="currentStory.content?.heroSubtext"
-                        :content="currentStory.content?.heroSubtext"
-                        class="hero-richtext mt-4"
-                    />
-                    <div
-                        v-if="heroButtons && heroButtons.length > 0"
-                        class="mt-4 flex items-start gap-2"
-                    >
-                        <nuxt-link
-                            v-for="(button, index) in heroButtons"
-                            :key="index"
-                            class="btn hover:text-yellow"
-                            :to="getUrl(button.full_slug)"
+        <div class="relative col-span-full row-start-1 py-8">
+            <div class="container container-px flex h-full">
+                <div
+                    class="my-auto flex w-full flex-col items-center lg:col-span-10 lg:col-start-2 lg:w-1/2 lg:pr-12"
+                >
+                    <div class="my-auto flex w-full flex-col">
+                        <p class="text-lg font-bold">{{ title }}</p>
+                        <p v-if="currentStory.content?.brand" class="italic">
+                            by {{ currentStory.content?.brand }}
+                        </p>
+                        <rich-text
+                            v-if="currentStory.content?.heroSubtext"
+                            :content="currentStory.content?.heroSubtext"
+                            class="hero-richtext mt-4"
+                        />
+                        <div
+                            v-if="heroButtons && heroButtons.length > 0"
+                            class="mt-4 flex items-start gap-2"
                         >
-                            {{ button.name }}
-                        </nuxt-link>
+                            <nuxt-link
+                                v-for="(button, index) in heroButtons"
+                                :key="index"
+                                class="btn hover:text-yellow"
+                                :to="getUrl(button.full_slug)"
+                            >
+                                {{ button.name }}
+                            </nuxt-link>
+                        </div>
                     </div>
                 </div>
             </div>
