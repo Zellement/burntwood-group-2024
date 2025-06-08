@@ -69,7 +69,7 @@ export const useStoryblokStore = defineStore('storyblok', {
                 }
                 return response
             } catch (error: any) {
-                console.log(error)
+                console.warn('Storyblok fetch failed:', error)
                 throw new Error('Story not found')
             }
         },
